@@ -1,0 +1,169 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-08-30T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v10.0.0",
+  "resources": [
+    {
+      "_id": "wrk_uce_backend_produtos",
+      "parentId": null,
+      "modified": 1756530000000,
+      "created": 1756530000000,
+      "name": "Uce Backend - Produtos",
+      "description": "Coleção para testar todas as rotas de produto",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_uce_backend_base",
+      "parentId": "wrk_uce_backend_produtos",
+      "modified": 1756530000000,
+      "created": 1756530000000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:3000",
+        "product_id": "1"
+      },
+      "dataPropertyOrder": [
+        "base_url",
+        "product_id"
+      ],
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1756530000000,
+      "environmentType": "kv",
+      "_type": "environment"
+    },
+    {
+      "_id": "req_list_products",
+      "parentId": "wrk_uce_backend_produtos",
+      "modified": 1756530000000,
+      "created": 1756530000000,
+      "url": "{{ _.base_url }}/products",
+      "name": "Listar produtos",
+      "description": "Obtém todos os produtos cadastrados",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -100,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_get_product_by_id",
+      "parentId": "wrk_uce_backend_produtos",
+      "modified": 1756530000000,
+      "created": 1756530000000,
+      "url": "{{ _.base_url }}/products/{{ _.product_id }}",
+      "name": "Buscar produto por ID",
+      "description": "Obtém um produto específico pelo ID",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -90,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_create_product",
+      "parentId": "wrk_uce_backend_produtos",
+      "modified": 1756530000000,
+      "created": 1756530000000,
+      "url": "{{ _.base_url }}/products",
+      "name": "Criar produto",
+      "description": "Cria um novo produto",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Notebook Gamer\",\n  \"description\": \"Notebook para desenvolvimento e jogos\",\n  \"price\": 4999.9,\n  \"stock\": 10\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -80,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_update_product",
+      "parentId": "wrk_uce_backend_produtos",
+      "modified": 1756530000000,
+      "created": 1756530000000,
+      "url": "{{ _.base_url }}/products/{{ _.product_id }}",
+      "name": "Atualizar produto",
+      "description": "Atualiza um produto existente pelo ID",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Notebook Gamer Atualizado\",\n  \"description\": \"Versão atualizada do notebook\",\n  \"price\": 5299.9,\n  \"stock\": 8\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -70,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_delete_product",
+      "parentId": "wrk_uce_backend_produtos",
+      "modified": 1756530000000,
+      "created": 1756530000000,
+      "url": "{{ _.base_url }}/products/{{ _.product_id }}",
+      "name": "Excluir produto",
+      "description": "Deleta um produto pelo ID",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -60,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    }
+  ]
+}
