@@ -5,6 +5,7 @@ import path from "path";
 import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
 import productRoutes from "./routes/productRoutes";
+import categoryRoutes from "./routes/categoryRoutes";
 import { errorHandler } from "./middlewares/errorHandler";
 
 const app = express();
@@ -14,15 +15,15 @@ const swaggerOptions: swaggerJsdoc.Options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "API de Produtos",
+      title: "API de Controle de Estoque",
       version: "1.0.0",
-      description: "Documentação da API REST de Produtos",
+      description: "Documentação da API REST de Controle de Estoque",
     },
     servers: [{ url: `http://localhost:${PORT}` }],
   },
   apis: [
     path.join(__dirname, "./routes/*.ts"),
-    path.join(__dirname, "./routes/*.js")
+    path.join(__dirname, "./routes/*.js"),
   ],
 };
 
@@ -38,6 +39,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/products", productRoutes);
+app.use("/categories", categoryRoutes);
 
 app.use(errorHandler);
 

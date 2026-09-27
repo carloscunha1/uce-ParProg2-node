@@ -4,6 +4,7 @@ export interface Product {
   description: string | null;
   price: number;
   stock: number;
+  categoryId: number | null;
   createdAt: Date;
 }
 
@@ -12,6 +13,7 @@ export interface CreateProductDTO {
   description?: string;
   price: number;
   stock?: number;
+  categoryId?: number;
 }
 
 export interface UpdateProductDTO {
@@ -19,4 +21,5 @@ export interface UpdateProductDTO {
   description?: string;
   price?: number;
   stock?: number;
+  categoryId?: number;
 }

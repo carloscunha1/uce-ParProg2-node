@@ -1,6 +1,6 @@
-# API de Gerenciamento de Produtos
+# API de Gerenciamento de Estoque
 
-Backend RESTful desenvolvido em Node.js e TypeScript para gerenciamento de produtos, utilizando Express 5, PostgreSQL e Prisma ORM 7 com driver adapter `@prisma/adapter-pg`.
+Backend RESTful desenvolvido em Node.js e TypeScript para gerenciamento de produtos e categorias de estoque, utilizando Express 5, PostgreSQL e Prisma ORM 7 com driver adapter `@prisma/adapter-pg`.
 
 ---
 
@@ -43,8 +43,16 @@ npx prisma migrate dev --name init
 ```bash
 npm run dev
 ```
+
 Produção:
 ```bash
 npm run build
 npm start
 ```
+
+## Principais recursos
+
+- CRUD de produtos em `/products`;
+- CRUD de categorias em `/categories`;
+- associação opcional entre produtos e categorias;
+- documentação disponível em `/docs`.
